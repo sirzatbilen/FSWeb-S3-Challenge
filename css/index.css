@@ -87,16 +87,38 @@ p, a {
 header {
     width: 100%;
     height: 100vh;
-    background-image: url('../img/home-header.jpg');
+    background-image: url(../img/home-header.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    text-align: center;
+}
+header div{
+    background-color: rgba(0, 4, 17, 0.464);
+}
+header nav{
+    margin-top:2rem;
+}
+header h1{
+    color: white;
+    font-size: 6rem;
+    }
+header a{
+   padding:0 7rem ;
+   color: white;
+   }
+.ikons{
+    color: white;
+    font-size: 3rem;
+    }
+.ikons i{
+padding: 0 3rem;
 }
 
 /* spacers */
 .spacer {
     width: 100%;
-    height: 20vh;
+    height: 30vh;
     background-color: rgb(0, 4, 17);
 }
 .spacer-sm {
@@ -113,8 +135,20 @@ header {
     background-color: rgb(0, 4, 17);
 }
 
+.gallery img{
+    width: 25%;
+    padding: 1%;
+    height: 25%;
+}
+
+.gallery h2{
+    color: white;
+}
+
+
 /* about us section */
 .about {
+    color: white;
     width: 100%;
     height: 75vh;
     text-align: center;
@@ -137,12 +171,17 @@ header {
     width: 100%;
 }
 
+.about p{
+    font-size: 2rem;
+}
 .about-container .text {
     width: 50%;
+    margin: 5%;
 }
 
 /* contact us section */
 .contact {
+    color: white;
     text-align: center;
     background-image: url("../img/jumbo-restaurant.jpg");
     background-size: cover;
@@ -189,65 +228,108 @@ header {
 }
 
 /* footer section */
-footer {
+footer { 
+    background-color: black;
+    color: white;
     width: 100%;
     height: 15vh;
+    font-size: 2rem;
     padding-top: 2.5vh;
-    font-size: 3rem;
+}
+footer nav{
+    text-align: end;
+    padding-bottom: 3rem;
+}
+footer nav a{
+    color: white;
+    font-size: 1.5rem;
+    padding: 0 3rem;
+}
+.copyright{
+    text-align: end;
+}
+footer p{
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    font-style: oblique;
+}
+
+form{
+    background-color: black;
+}
+.footer-section{
+    display: flex;
+    justify-content: space-around;
 }
 
 /* mobile media query */
-@media (max-width: 428px) {
-    /* header section */
-    
-
-    /* gallery section */
-    .gallery {
-        height: auto;
-    }
-    
-    /* about us section */
-
-    .about {
-        height: 200vh;
-    }
-    
-    .about h2 {
-        width: 100%;
-        padding-top: 5vh;
-    }
-    
-    .about-container .text {
-        width: 85%;
-    }
-    
-    /* contact us section */
-    .contact h3 {
-        padding-top: 2.5vh;
-    }
-    
-    .info {
-        flex-wrap: wrap;
-    }
-    
-    .address {
-        width: 100%;
-        padding-bottom: 2.5vh;
-    }
-    
-    .hours {
-        width: 100%;
-    }
-    
-    .contacts {
-        width: 100%;
-        padding-bottom: 2.5vh;
-    }
-
-    /* footer section */
-    footer {
-        height: auto;
-        padding-top: 2.5vh;
-        font-size: 2rem;
-    }
+@media (max-width: 550px) {
+    header h1{
+        font-size: 7rem;
+        text-align: center;
+      }
+      header nav {
+          display: flex;
+          flex-direction: column;
+      }
+      .ikons i{
+          padding: 0;
+      }
+      /* gallery section */
+      .gallery {
+          height: auto;
+      }
+      .gallery img{
+          width: 100%;
+      }
+      /* about us section */
+      .about {
+          height: 200vh;
+      }
+      .about h2 {
+          width: 100%;
+          padding-top: 5vh;
+      }
+      .about-container .text {
+          width: 85%;
+      }
+      /* contact us section */
+      .contact h3 {
+          padding-top: 2.5vh;
+      }
+      .info {
+          flex-wrap: wrap;
+      }
+      .address {
+          width: 100%;
+          padding-bottom: 2.5vh;
+      }
+      .hours {
+          width: 100%;
+      }
+      .contacts {
+          width: 100%;
+          padding-bottom: 2.5vh;
+      }
+      /* footer section */
+      footer {
+          height: auto;
+          padding-top: 2.5vh;
+          font-size: 2rem;
+      }
+      .footer-section{
+         flex-direction: column;
+      }
+  footer nav a {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      }
+      footer div{
+          text-align: center;
+      }
+      .copyright{
+          text-align: center;
+          padding-bottom: 2rem;
+      }
 }
